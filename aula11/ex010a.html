@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu país?</title>
+</head>
+<body>
+    <H1>Diga aí!</H1>
+    Qual o seu país? <input type="text" name="country1" id="country1">
+    <input type="button" value="resposta" onclick="decidir()">
+    <div id="res">
+
+    </div>
+    <script>
+        function decidir() {
+            var txcntry = window.document.getElementById('country1')
+            var res = window.document.querySelector('div#res')
+         
+            res.innerHTML = `<p>Então você é de ${txcntry}.</p>`
+            if (txcntry == 'Brasil') {
+                res.innerHTML += `Você é brazuca!!!`
+            } else {
+                res.innerHTML += `Tu é estrangeiro amigo!`
+            }
+            res.innerHTML += `Prazer em te conhecer.`
+        }
+    </script>
+    
+</body>
+</html>
